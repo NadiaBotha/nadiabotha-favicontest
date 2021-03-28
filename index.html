@@ -43,25 +43,16 @@
     <a href="https://book.nightsbridge.com/28101" class="book-button up-button" target="_blank"><i class="far fa-calendar-alt fa-2x"></i></a>
     
     <script>
-        //Get the button:
-        mybutton = document.getElementById("myBtn");
+        const navbar = document.getElementById('navbar');
+ 
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
+        window.onscroll = function(){
+            if(window.pageYOffset > 20) {
+                navbar.classList.remove('top');
             } else {
-                mybutton.style.display = "none";
+                navbar.classList.add('top');
             }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        };
     </script>
 
 </body>
